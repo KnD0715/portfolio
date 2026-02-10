@@ -12,6 +12,8 @@ export interface Project {
   challenges: Challenge[];
   links: ProjectLinks;
   metrics?: ProjectMetric[];
+  roleDetails?: RoleDetail[];
+  images?: ProjectImage[];
   featured: boolean;
   order: number;
 }
@@ -31,4 +33,21 @@ export interface ProjectLinks {
 export interface ProjectMetric {
   label: string;
   value: string;
+}
+
+export interface ContributionItem {
+  title: string;
+  details: string[];
+}
+
+export interface RoleDetail {
+  area: string;
+  summary: string;
+  techStack?: string[];
+  contributions: ContributionItem[];
+}
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
 }

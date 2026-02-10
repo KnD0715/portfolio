@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, Github, ExternalLink } from "lucide-react";
+import { ArrowLeft, Github, ExternalLink, Lock } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { TechTag } from "@/components/ui/TechTag";
+import { ImageGallery } from "@/components/ui/ImageModal";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -63,7 +64,7 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Links */}
         <div className="mt-6 flex gap-3">
-          {project.links.github && (
+          {project.links.github ? (
             <a
               href={project.links.github}
               target="_blank"
@@ -73,6 +74,11 @@ export default async function ProjectPage({ params }: Props) {
               <Github size={16} />
               GitHub
             </a>
+          ) : (
+            <span className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground">
+              <Lock size={14} />
+              비공개 레포지토리 (SSAFY)
+            </span>
           )}
           {project.links.demo && (
             <a
@@ -88,10 +94,20 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </header>
 
+      {/* Screenshots */}
+      {project.images && project.images.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-4 text-xl font-semibold text-foreground">
+            스크린샷
+          </h2>
+          <ImageGallery images={project.images} />
+        </section>
+      )}
+
       {/* Metrics */}
       {project.metrics && project.metrics.length > 0 && (
         <section className="mb-12">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {project.metrics.map((metric) => (
               <div
                 key={metric.label}
@@ -118,6 +134,59 @@ export default async function ProjectPage({ params }: Props) {
           {project.description}
         </p>
       </section>
+
+      {/* Role Details - 담당 파트 */}
+      {project.roleDetails && project.roleDetails.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-6 text-xl font-semibold text-foreground">
+            담당 파트
+          </h2>
+          <div className="space-y-6">
+            {project.roleDetails.map((role, roleIdx) => (
+              <div
+                key={roleIdx}
+                className="rounded-xl border border-border bg-card p-6"
+              >
+                <div className="mb-4">
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {role.area}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {role.summary}
+                  </p>
+                  {role.techStack && role.techStack.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {role.techStack.map((tech) => (
+                        <TechTag key={tech} name={tech} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="space-y-4">
+                  {role.contributions.map((contrib, contribIdx) => (
+                    <div key={contribIdx}>
+                      <h4 className="text-sm font-semibold text-foreground">
+                        {contrib.title}
+                      </h4>
+                      <ul className="mt-1.5 space-y-1">
+                        {contrib.details.map((detail, detailIdx) => (
+                          <li
+                            key={detailIdx}
+                            className="flex items-start gap-2 text-sm text-muted-foreground"
+                          >
+                            <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-muted-foreground" />
+                            {detail}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Features */}
       <section className="mb-12">
