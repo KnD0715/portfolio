@@ -29,7 +29,7 @@ export const medichart: Project = {
   challenges: [],
   links: {
     github: "https://github.com/KnD0715/MediChart",
-    live: "http://223.130.155.178",
+    demo: "http://223.130.155.178",
   },
   metrics: [
     { label: "팀 규모", value: "6인" },
