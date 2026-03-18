@@ -1,6 +1,6 @@
 export interface Experience {
   id: string;
-  type: "education" | "work" | "activity";
+  type: "education" | "work" | "activity" | "award";
   title: string;
   organization: string;
   period: string;
