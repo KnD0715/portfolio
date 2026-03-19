@@ -23,7 +23,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <Link
         href={`/projects/${project.slug}`}
         className={cn(
-          "group block rounded-xl border border-border bg-card p-6",
+          "group flex h-full flex-col rounded-xl border border-border bg-card p-6",
           "transition-all duration-300",
           "hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5",
           "hover:-translate-y-1"
@@ -40,15 +40,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
           <ArrowRight
             size={18}
-            className="mt-1 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary"
+            className="mt-1 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary"
           />
         </div>
 
-        <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">
+        <p className="mb-4 line-clamp-3 text-sm text-muted-foreground">
           {project.description}
         </p>
 
-        {project.metrics && (
+        {project.metrics && project.metrics.length > 0 && (
           <div className="mb-4 flex flex-wrap gap-x-4 gap-y-1">
             {project.metrics.slice(0, 3).map((metric) => (
               <span
@@ -73,7 +73,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           )}
         </div>
 
-        <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
+        <div className="mt-auto flex items-center justify-between pt-4 text-xs text-muted-foreground">
           <span>{project.period}</span>
           <span>
             {project.role} &middot; {project.teamSize}명

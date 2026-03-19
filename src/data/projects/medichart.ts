@@ -29,11 +29,8 @@ export const medichart: Project = {
   challenges: [],
   links: {
     github: "https://github.com/KnD0715/MediChart",
-    demo: "http://223.130.155.178",
   },
   metrics: [
-    { label: "팀 규모", value: "6인" },
-    { label: "프로젝트 기간", value: "1개월" },
     { label: "질병 예측", value: "6종" },
     { label: "다국어 지원", value: "3개국어" },
   ],
