@@ -192,5 +192,5 @@ export const squiz: Project = {
     },
   ],
   featured: true,
-  order: 1,
+  order: 2,
 };

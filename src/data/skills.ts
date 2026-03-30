@@ -35,7 +35,7 @@ export const skills: SkillCategory[] = [
       { name: "Jira", level: "intermediate" },
       { name: "Swagger", level: "beginner" },
       { name: "IntelliJ IDEA", level: "intermediate" },
-      { name : "VsCode", level: "intermediate"}
+      { name: "VsCode", level: "intermediate" },
     ],
   },
 ];

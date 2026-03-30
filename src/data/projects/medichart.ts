@@ -59,5 +59,5 @@ export const medichart: Project = {
     },
   ],
   featured: false,
-  order: 2,
+  order: 3,
 };
