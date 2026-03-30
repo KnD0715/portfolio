@@ -62,6 +62,12 @@ export const naeda: Project = {
   links: {
     github: "https://github.com/KimInJae-dev/naeda",
   },
+  images: [
+    { src: "/images/projects/naeda-01.png", alt: "Swagger API 문서" },
+    { src: "/images/projects/naeda-02.png", alt: "시스템 아키텍처 다이어그램" },
+    { src: "/images/projects/naeda-03.png", alt: "ERD — 전체 데이터베이스 구조" },
+    { src: "/images/projects/naeda-04.jpg", alt: "AI 챗봇 토미봇 화면" },
+  ],
   metrics: [
     { label: "담당 티켓", value: "31개" },
     { label: "구현 도메인", value: "14개" },
