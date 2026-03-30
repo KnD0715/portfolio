@@ -60,7 +60,6 @@ export const naeda: Project = {
     },
   ],
   links: {
-    github: "https://github.com/KimInJae-dev/naeda",
   },
   images: [
     { src: "/images/projects/naeda-01.png", alt: "Swagger API 문서" },
