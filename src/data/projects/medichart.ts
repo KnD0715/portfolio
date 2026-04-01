@@ -30,6 +30,10 @@ export const medichart: Project = {
   links: {
     github: "https://github.com/KnD0715/MediChart",
   },
+  images: [
+    { src: "/images/projects/medichart-01.png", alt: "건강진단서 OCR 번역 기능" },
+    { src: "/images/projects/medichart-02.png", alt: "로그인 화면" },
+  ],
   metrics: [
     { label: "질병 예측", value: "6종" },
     { label: "다국어 지원", value: "3개국어" },
