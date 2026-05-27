@@ -6,16 +6,16 @@ export const skills: SkillCategory[] = [
     skills: [
       { name: "Java", level: "intermediate" },
       { name: "Spring Boot", level: "intermediate" },
-      { name: "JPA / Hibernate", level: "intermediate" },
       { name: "MySQL", level: "intermediate" },
+      { name: "PostgreSQL", level: "beginner" },
     ],
   },
   {
     category: "AI Service",
     skills: [
       { name: "Python", level: "intermediate" },
-      { name: "Flask", level: "intermediate" },
-      { name: "Sentence Transformers", level: "intermediate" },
+      { name: "FastAPI", level: "beginner" },
+      { name: "Flask", level: "beginner" },
     ],
   },
   {
@@ -25,17 +25,26 @@ export const skills: SkillCategory[] = [
       { name: "TypeScript", level: "intermediate" },
       { name: "Tailwind CSS", level: "intermediate" },
       { name: "HTML / CSS", level: "intermediate" },
-      { name: "Zustand", level: "beginner" },
+    ],
+  },
+  {
+    category: "DevOps / Infra",
+    skills: [
+      { name: "Docker", level: "intermediate" },
+      { name: "Docker Compose", level: "intermediate" },
+      { name: "Jenkins", level: "beginner" },
+      { name: "Nginx", level: "beginner" },
     ],
   },
   {
     category: "Tools & Collaboration",
     skills: [
       { name: "Git / GitHub", level: "advanced" },
+      { name: "GitLab", level: "intermediate" },
       { name: "Jira", level: "intermediate" },
-      { name: "Swagger", level: "beginner" },
+      { name: "Swagger", level: "intermediate" },
       { name: "IntelliJ IDEA", level: "intermediate" },
-      { name: "VsCode", level: "intermediate" },
+      { name: "VS Code", level: "intermediate" },
     ],
   },
 ];

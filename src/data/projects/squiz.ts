@@ -6,7 +6,7 @@ export const squiz: Project = {
   subtitle: "SSAFY 교육생을 위한 IT 스터디 관리 플랫폼",
   description:
     "스터디 모집부터 운영, AI 기반 CS 퀴즈 채점, 실시간 워크스페이스 협업까지 올인원으로 지원하는 스터디 관리 플랫폼입니다. 7개 백엔드 도메인 설계·구현·테스트, Python Flask 기반 AI 유사도 채점 서비스 단독 개발, React/TypeScript 워크스페이스 UI 풀스택 구현을 담당했습니다.",
-  period: "2025.01 - 2025.02",
+  period: "2026.01 - 2026.02",
   teamSize: 6,
   role: "Backend & AI Service Developer",
   thumbnail: "/images/projects/squiz-thumbnail.png",
@@ -192,5 +192,5 @@ export const squiz: Project = {
     },
   ],
   featured: true,
-  order: 2,
+  order: 3,
 };

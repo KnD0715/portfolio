@@ -15,6 +15,7 @@ export const experiences: Experience[] = [
       "FastAPI + OpenAI GPT 기반 RAG 챗봇 토미봇 단독 구현",
       "공통 프로젝트 SQuiz — 백엔드 7개 도메인 + Python Flask AI 채점 서비스 + React 프론트 담당",
       "특화 프로젝트 NAEDA — Spring Boot 백엔드 31개 티켓 + FastAPI AI 챗봇 담당",
+      "자율 프로젝트 우주 오락실 — GitLab-Jenkins-Docker CI/CD 파이프라인·멀티 서버 로드밸런싱·Grafana 모니터링 구축 및 미니게임 2종 개발",
     ],
     current: true,
   },
