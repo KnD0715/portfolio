@@ -8,7 +8,7 @@ export const spacearcade: Project = {
     "닉네임만 입력하면 최대 100명이 동시 접속해 미니게임을 라운드로 진행하고 최종 랭킹을 가리는 마리오 파티형 실시간 경쟁 플랫폼입니다. GitLab-Jenkins-Docker 기반 멀티 서버 CI/CD 파이프라인 구축, Nginx ip_hash 로드밸런싱 설계, Prometheus+Grafana 모니터링 운영, 미니게임 2종 개발을 담당했습니다.",
   period: "2026.04 - 2026.05",
   teamSize: 6,
-  role: "DevOps & Frontend Game Developer",
+  role: "Infra & FullStack Developer",
   thumbnail: "/images/projects/spacearcade-thumbnail.png",
   techStack: [
     "Jenkins",
@@ -18,7 +18,7 @@ export const spacearcade: Project = {
     "Prometheus",
     "Grafana",
     "Spring Boot",
-    "WebSocket",
+    "Java",
     "Redis",
     "React 18",
     "TypeScript",
