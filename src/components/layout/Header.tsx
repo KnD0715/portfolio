@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, House } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/lib/constants";
 import { ThemeToggle } from "./ThemeToggle";
@@ -25,9 +25,10 @@ export function Header() {
       <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
         <Link
           href="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="text-lg font-bold tracking-tight text-foreground"
         >
-          KnD
+          <House size={20} />
         </Link>
 
         {/* Desktop Navigation */}
