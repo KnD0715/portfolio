@@ -8,7 +8,7 @@ interface SkillBadgeProps {
 
 const levelStyles: Record<SkillLevel, string> = {
   advanced:
-    "bg-primary/10 text-primary border-primary/20 dark:bg-primary/15 dark:border-primary/30",
+    "bg-accent text-accent-foreground border-border",
   intermediate:
     "bg-accent text-accent-foreground border-border",
   beginner:
