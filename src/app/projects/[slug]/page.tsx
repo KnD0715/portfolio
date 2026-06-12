@@ -53,7 +53,14 @@ export default async function ProjectPage({ params }: Props) {
           <span className="h-1 w-1 rounded-full bg-muted-foreground" />
           <span>{project.role}</span>
           <span className="h-1 w-1 rounded-full bg-muted-foreground" />
-          <span>팀 {project.teamSize}명</span>
+          <span>
+            팀 {project.teamSize}명
+            {project.teamComposition && (
+              <span className="ml-1.5 text-xs opacity-75">
+                ({project.teamComposition.map((c) => `${c.role} ${c.count}`).join(" · ")})
+              </span>
+            )}
+          </span>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-1.5">

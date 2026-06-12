@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   period: string;
   teamSize: number;
+  teamComposition?: { role: string; count: number }[];
   role: string;
   thumbnail: string;
   techStack: string[];

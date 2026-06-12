@@ -8,7 +8,11 @@ export const spacearcade: Project = {
     "닉네임만 입력하면 최대 100명이 동시 접속해 미니게임을 라운드로 진행하고 최종 랭킹을 가리는 마리오 파티형 실시간 경쟁 플랫폼입니다. GitLab-Jenkins-Docker 기반 멀티 서버 CI/CD 파이프라인 구축, Nginx ip_hash 로드밸런싱 설계, Prometheus+Grafana 모니터링 운영, 미니게임 2종 개발을 담당했습니다.",
   period: "2026.04 - 2026.05",
   teamSize: 6,
-  role: "Infra & FullStack Developer",
+  teamComposition: [
+    { role: "Game Dev", count: 6 },
+    { role: "Infra", count: 1 },
+  ],
+  role: "Infra & Game Developer",
   thumbnail: "/images/projects/spacearcade-thumbnail.png",
   techStack: [
     "Jenkins",
@@ -29,12 +33,11 @@ export const spacearcade: Project = {
   features: [
     "GitLab → Jenkins → Docker 완전 자동화 CI/CD — 머지 한 번으로 SSAFY·C5a 두 서버 동시 배포 및 Mattermost 팀 알림",
     "Nginx ip_hash 로드밸런싱 — WebSocket 세션 고정(Sticky) + 100명 부하 분산",
-    "Let's Encrypt SSL — 전 구간 HTTPS / WebSocket wss 보안 연결",
     "Prometheus + Grafana 모니터링 — JVM·CPU·응답시간·동시 접속자 수 실시간 대시보드",
     "플러그인 기반 게임 모듈 아키텍처 — IGameModule 인터페이스 표준화, 게임 레지스트리 패턴",
     "무(無)DB 휘발성 설계 — 서버 메모리 + Redis로 방·게임·순위 상태 관리, 200ms 델타 동기화",
-    "단어 외우기 게임 — 30초 암기 + 60초 입력, Set 기반 O(1) 중복 체크",
-    "총알 피하기 게임 — delta time 프레임 독립 루프, 오브젝트 풀링 200개, 제곱근 생략 충돌 판정",
+    "단어 외우기 게임 — 30초 암기 + 60초 입력 구조의 기억력·타이핑 게임",
+    "총알 피하기 게임 — Canvas 2D API 기반, 시간 경과에 따른 난이도 증가",
   ],
   challenges: [
     {
@@ -95,7 +98,7 @@ export const spacearcade: Project = {
       area: "DevOps — 운영 인프라",
       summary:
         "100명 동시 접속을 두 서버로 분산하는 로드밸런싱과 SSL·모니터링 운영 환경 구축",
-      techStack: ["Nginx", "Let's Encrypt", "Prometheus", "Grafana"],
+      techStack: ["Nginx", "Prometheus", "Grafana"],
       contributions: [
         {
           title: "Nginx 리버스 프록시 + 로드밸런서",
@@ -105,9 +108,8 @@ export const spacearcade: Project = {
           ],
         },
         {
-          title: "보안 및 모니터링",
+          title: "모니터링",
           details: [
-            "Let's Encrypt SSL 인증서 발급 — 전 구간 HTTPS, WebSocket wss 보안 연결 적용",
             "Prometheus + Grafana 대시보드 — JVM·CPU·응답시간·동시 접속자 수 실시간 가시화",
           ],
         },
@@ -139,23 +141,21 @@ export const spacearcade: Project = {
     {
       area: "Frontend — 미니게임 2종",
       summary:
-        "Canvas 2D API 기반 미니게임 2종을 직접 설계·구현, 성능 최적화 적용",
-      techStack: ["React 18", "TypeScript", "Canvas 2D API", "requestAnimationFrame"],
+        "Canvas 2D API 기반 미니게임 2종 구현",
+      techStack: ["React 18", "TypeScript", "Canvas 2D API"],
       contributions: [
         {
           title: "총알 피하기 (우주 테마)",
           details: [
-            "requestAnimationFrame + delta time 적용 — 프레임 독립적(frame-independent) 게임 루프로 기기 성능 무관 공정한 난이도",
-            "총알 200개 오브젝트 풀링 — 객체 생성·소멸 반복 제거로 GC 부하 감소",
-            "충돌 판정 최적화 — 제곱근 생략 거리 비교(dx*dx + dy*dy < (r1+r2)²)로 연산량 절감",
+            "Canvas 2D API 기반 실시간 총알 피하기 게임 구현",
+            "시간 경과에 따라 총알 속도·수가 증가하는 난이도 설계",
           ],
         },
         {
           title: "단어 외우기 (고대 유적 테마)",
           details: [
             "30초 암기 → 60초 입력의 기억력·타이핑 게임 구조 설계",
-            "이미 맞힌 단어 중복 체크를 Set 자료구조로 O(1) 처리",
-            "단계 전환 CSS transition 연출로 자연스러운 게임 흐름 구현",
+            "이미 맞힌 단어 중복 입력 방지 및 단계 전환 UI 구현",
           ],
         },
       ],

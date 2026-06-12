@@ -8,7 +8,14 @@ export const squiz: Project = {
     "스터디 모집부터 운영, AI 기반 CS 퀴즈 채점, 실시간 워크스페이스 협업까지 올인원으로 지원하는 스터디 관리 플랫폼입니다. 7개 백엔드 도메인 설계·구현·테스트, Python Flask 기반 AI 유사도 채점 서비스 단독 개발, React/TypeScript 워크스페이스 UI 풀스택 구현을 담당했습니다.",
   period: "2026.01 - 2026.02",
   teamSize: 6,
-  role: "Backend & AI Service Developer",
+  teamComposition: [
+    { role: "FullStack", count: 4 },
+    { role: "AI", count: 1 },
+    { role: "Infra", count: 1 },
+    { role: "Mobile", count: 1 },
+    { role: "FE", count: 1 },
+  ],
+  role: "FullStack & AI Service Developer",
   thumbnail: "/images/projects/squiz-thumbnail.png",
   techStack: [
     "Spring Boot",

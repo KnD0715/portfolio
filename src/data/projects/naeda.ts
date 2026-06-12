@@ -8,6 +8,12 @@ export const naeda: Project = {
     "페이스페이(FacePay)로 결제할 때마다 포인트가 쌓이고, AI가 소비를 분석해주고, 모은 포인트로 구미 지역 할인권을 교환하는 지역 특화 금융 앱입니다. RBA 리스크 기반 인증, FDS 이상 거래 탐지, SSAFY 금융 API 5종 이상 연동을 담당했으며, RAG 기반 AI 챗봇 토미봇을 풀스택으로 구현했습니다.",
   period: "2026.02 - 2026.04",
   teamSize: 6,
+  teamComposition: [
+    { role: "BE", count: 3 },
+    { role: "FE", count: 2 },
+    { role: "AI", count: 1 },
+    { role: "Infra", count: 1 },
+  ],
   role: "Backend & AI Service Developer",
   thumbnail: "/images/projects/naeda-thumbnail.png",
   techStack: [

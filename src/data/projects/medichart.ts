@@ -8,6 +8,10 @@ export const medichart: Project = {
     "바쁜 일상으로 건강을 놓치는 현대인들을 위한 질병 예측 및 건강진단서 해석 플랫폼입니다. 로그인/회원가입 시스템과 건강진단서 OCR 해석 기능의 백엔드를 담당했습니다.",
   period: "2024.07 - 2024.08",
   teamSize: 6,
+  teamComposition: [
+    { role: "BE", count: 4 },
+    { role: "FE", count: 2 },
+  ],
   role: "Backend Developer",
   thumbnail: "/images/projects/medichart-thumbnail.png",
   techStack: [
