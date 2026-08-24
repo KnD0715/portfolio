@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
     type: "activity",
     title: "멋쟁이사자처럼 대학 연합 동아리 12기",
     organization: "LikeLion",
-    period: "2024.03 - 2024.11",
+    period: "2024.01 - 2024.12",
     description: "MediChart 프로젝트 개발",
     details: [
       "질병 예측 및 건강진단서 해석 플랫폼 MediChart 백엔드 개발",
